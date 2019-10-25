@@ -8,7 +8,7 @@ exports.socket = () =>
       console.log('User disconnect');
     })
     client.on('sendMessage', (data, callback) => {
-      console.log(data);
+      console.log(`Data sent by ${data.user} ${data}`);
       client.broadcast.emit('sendMessage', data)
       // if (message.user) {
       //   callback({
